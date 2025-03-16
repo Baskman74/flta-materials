@@ -42,24 +42,20 @@ class _HomeState extends State<Home> {
     )
   ];
 
-
   @override
   Widget build(BuildContext context) {
     final pages = [
       ExplorePage(),
+      const Center(child: Text('Order Page', style: TextStyle(fontSize: 32.0))),
       const Center(
-          child: Text('Order Page', 
-          style: TextStyle(fontSize: 32.0))),
-      const Center(
-        child: Text('Account Page', 
-        style: TextStyle(fontSize: 32.0))),
+          child: Text('Account Page', style: TextStyle(fontSize: 32.0))),
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.appTitle),
         elevation: 4.0,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         actions: [
           ThemeButton(
             changeThemeMode: widget.changeTheme,
